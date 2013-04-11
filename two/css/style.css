@@ -1,0 +1,321 @@
+
+html{
+	
+}
+
+body{
+	font-family: "ff-tisa-web-pro","Chaparal Pro", Garamond, Georgia, Serif;
+	z-index: 1;
+}
+
+
+#main {
+	margin: 10px;
+	border: solid 1px #51B748;
+	height: 100%;
+
+}
+
+
+p, li
+{
+  font-size: 18px;   
+}
+
+
+h1{
+	-moz-column-span: all;
+	-webkit-column-span: all;
+	column-span: all;
+}
+
+
+
+header {
+	margin-right: 12%;
+	margin-left: 12%;
+
+}
+
+header img {
+	top: -30px;
+	width: 20%;
+	margin-left: 80%;
+	float: right;
+	position: relative;
+}
+
+/* Begin navigation styles */
+
+/* Gives styling for navigation box. */
+ #navigation {
+    height: 100px;
+    width: 200px;
+    border: 1px solid green;
+    left: -175px;
+    margin-top: 30px;
+    background-color: white;
+    -webkit-box-shadow:0px 3px 1px 0px rgba(0, 0, 0, .25);
+    z-index: 500;
+    position: absolute;
+}
+/* Small hover navigation. */
+ #navigation:hover {
+    left: -173px;
+    position: absolute;
+}
+/* Gives buttons pointer hovers. */
+ #click {
+    cursor: pointer;
+}
+#click2 {
+    cursor: pointer;
+}
+/* Places buttons within box properly. */
+ ul.buttons {
+    padding-right: 10px;
+    float: right;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    padding-top: 38px;
+}
+/* Styling buttons. */
+ ul.buttons li {
+    list-style-type: none;
+    color: green;
+    line-height: 10px;
+}
+/* Places buttons within box properly for second set of buttons. */
+ ul.hide {
+    display: none;
+    padding-right: 10px;
+    float: right;
+    -webkit-margin-before: 0em;
+    padding-top: 38px;
+    margin-left: 0;
+    padding-left: 0;
+}
+/* Styling second set of buttons. */
+ ul.hide li {
+    list-style-type: none;
+    color: green;
+    line-height: 10px;
+}
+/* Styling for a hrefs you see in expanded navigation. */
+ ul.nav {
+    float: left;
+    margin-left: 15px;
+    padding-top: 20px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-padding-start: 0px;
+}
+/* Hides a hrefs in expanded navigation's bullets. */
+ ul.nav li {
+    list-style-type: none;
+    text-align: left;
+}
+
+#navigation a {
+	font-family: "proxima-nova", "helvetica neue", helvetica, arial, sans-serif;
+    font-weight: 400;
+	font-size: 12pt;
+	color: #51B748;
+	text-decoration: none;
+}
+
+/* End navigation styles */
+
+h1.solve {
+	font-weight: 400;
+	font-size: 8vmin;
+	font-size: 8vm;   /* IE9 */
+	line-height: 8vmin;
+	color: #51B748
+}
+
+h1.build {
+	font-weight: 400;
+	font-size: 6vmin;
+	font-size: 6vm;   /* IE9 */
+	line-height: 6vmin;
+	color: #B3B3B3;	
+	
+}
+
+
+
+/* Begin footer styles */
+
+
+footer {
+	background-color: #51B748;
+	color: #00733B;
+	position: relative;
+	clear: left;
+	float: left;
+	width: 100%;
+}
+
+footer h1, h2 {
+	font-family: "proxima-nova", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+footer h2 {
+	margin-top: 0;
+}
+
+footer a {
+	color: #51B748;
+	text-decoration: none;
+	font-family: "proxima-nova", "helvetica neue", helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 14pt;
+}
+
+footer p.copyright {
+	padding-top: 7%;
+	text-transform: uppercase;
+}
+
+#footrule{
+	border-top: solid 1px #00733B;
+	margin: 10px;
+}
+
+#colophon{
+	margin-right: 12%;
+	margin-left: 12%;	
+}
+
+.footcolumn1 {
+	width: 18%;
+	margin-right: 2%;
+	position: relative;
+	float: left;
+	}
+
+.footcolumn1 img{
+	width: 100%;
+}
+
+.footdoublecolumn {
+width: 80%;
+-moz-column-count:2; /* Firefox */
+-webkit-column-count:2; /* Safari and Chrome */
+column-count:2;
+-moz-column-gap:4%; /* Firefox */
+-webkit-column-gap:4%; /* Safari and Chrome */
+column-gap:20px;
+}
+
+#footerlinks{
+	font-family: "proxima-nova", "helvetica neue", helvetica, arial, sans-serif;
+	background-color: #00733B;
+	color: #51B748;
+	position: relative;
+	clear: both;
+	float: left;
+	width: 100%;
+}
+
+#footerlinks ul {
+	padding-top: 6%;
+	padding-bottom: 10%;
+}
+
+#footerlinks ul li {
+	float: left;
+	margin-right: 5%;
+	list-style-type: none;
+}
+
+.linksleft{
+	padding-left: 12%;
+	width: 38%;
+	float: left;
+	position: relative;
+	text-align: left;
+}
+
+.linksright{
+	width: 38%;
+	padding-right: 12%;
+	float: right;
+	position: relative;
+	text-align: right;
+}
+
+
+
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+
+		header img {
+			width: 65%;
+		}
+
+
+
+
+/* #Begin footer styles
+================================================== */
+
+		footer h1 {
+			margin-left: 8%;
+			margin-top: 1%;
+		}
+
+		.footcolumn1 {
+			width: 100%;
+		}
+
+		.footcolumn1 img{
+		width: 60%;
+		margin-left: 17%;
+		}
+
+		.footdoublecolumn {
+		width: 100%;
+		-moz-column-count:1; /* Firefox */
+		-webkit-column-count:1; /* Safari and Chrome */
+		column-count:1;
+		-moz-column-gap:4%; /* Firefox */
+		-webkit-column-gap:4%; /* Safari and Chrome */
+		column-gap:20px;
+		}
+
+		footer ul li {
+			float: none;
+		}
+
+		.linksleft {
+			padding-left: 0;
+		}
+
+	}
+
+
+
+

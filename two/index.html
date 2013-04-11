@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+    <html class="no-js lt-ie9" lang="en">
+    <![endif]-->
+    <!--[if gt IE 8]>
+        <!-->
+        <html class="no-js" lang="en">
+        <!--<![endif]-->
+        
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width" />
+            <link rel="stylesheet" href="css/normalize.css" />
+            <link href="css/style.css" rel="stylesheet" type="text/css" />
+            <link rel="stylesheet" href="css/flexslider.css"/>
+            <script type="text/javascript" src="//use.typekit.net/ail8lfw.js"></script>
+            <script type="text/javascript">
+                try {
+                    Typekit.load();
+                } catch (e) {}
+            </script>
+            
+            <title>Friendly Design Co.</title>
+        </head>
+        
+        <body>
+            <div id="main">
+                <header>
+                    <div id="logo">
+                        <img src="img/friendly-logo.svg" />
+                    </div>
+                    <div id="navigation">
+                        <div id="click">
+                            <!-- First buttons that you see. We swap these out so we have another navigation for the Jquery to target to hide the div again. -->
+                            <ul class="buttons">
+                                <li>&deg;</li>
+                                <li>&deg;</li>
+                                <li>&deg;</li>
+                            </ul>
+                        </div>
+                        <!-- Buttons that collapse the navigation. -->
+                        <div id="click2">
+                            <ul class="hide">
+                                <li>&deg;</li>
+                                <li>&deg;</li>
+                                <li>&deg;</li>
+                            </ul>
+                        </div>
+                        <!-- Begin navigation -->
+                        <ul class="nav" id="nav">
+                            <li> <a href="#">We're Friendly
+                </a>
+
+                            </li>
+                            <li><a href="#">Location and Contact</a>
+
+                            </li>
+                            <li><a href="#">Friendly Blog</a>
+
+                            </li>
+                        </ul>
+                    </div>
+                    	<h1 class="solve">
+			We solve creative problems with awesome solutions.
+		</h1>
+
+                    	<h1 class="build">
+			We build brands and develop dynamic user experiences.
+		</h1>
+
+                </header>
+                  <section class="slider">
+        <div class="flexslider carousel">
+          <ul class="slides">
+            <li>
+                <img src="img/slide.jpg" />
+                </li>
+                <li>
+                <img src="img/slide.jpg" />
+                </li>
+                <li>
+                <img src="img/slide.jpg" />
+                </li>
+                                <li>
+                <img src="img/slide.jpg" />
+                </li>
+          </ul>
+        </div>
+            </div>
+
+          
+      </section>
+
+
+            <footer>
+                <div id="footrule"></div>
+                <div id="colophon">
+                    <div class="footcolumn1">
+                        <img src="img/venn-outline.svg">
+                    </div>
+                    <div class="footdoublecolumn">
+                        	<h1>Colophon</h1>
+
+                        	<h2>Typography</h2>
+
+                        <p>We primarily typset this page in Proxima Nova, designed by by Mark Simonson Studio in 2005 to build upon his 1994 release of Proxima Sans. We also utilize Vernon Adams’s Pacifico script. All typographry are served care of Google Web Fonts.</p>
+                        	<h2>Javascript</h2>
+
+                        <p>We deployed several scripts to help create your fabulous viewing experience. Nivo Slider for the main image slideshow area, which then feed into Fancybox</p>
+                        <p>(Part of FancyApps), which is also used for the thumbnails later on the page. The Javascript for the right-hand side of the page was provided by James Cole.</p>
+                        	<h2>Technology</h2>
+
+                        <p>We build FriendlyDesign.co on a growing collection of MacBook Pros, using the Adobe Creative Suite v5.0, with the help of Firebug, Chrome, and various modern web utilties for CSS tweaking. This undertaken was largely fueled by MadCap Coffee provided through Canvas.Co/Work, at which we are among the founding members.</p>
+                    </div>
+                </div>
+                <div id="footerlinks">
+                    <div class="linksleft">
+                        <ul>
+                            <li><a href="#">BLOG</a></li>
+                            <li><a href="https://twitter.com/FriendlyDC">TWITTER</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">EMAIL</a></li>
+                        </ul>
+                    </div>
+                    <div class="linksright">
+                        <p class="copyright">&copy; 2013 Friendly Design CO</p>
+                    </div>
+                </div>
+            </footer>
+        </body>
+
+<script src="js/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+
+    // Expands our navigation.
+$("#click").click(function () {
+    // Hides first button set so we have a new anchor to hide div.
+    $('.buttons').hide();
+    $('.hide').show();
+    // Where animation begins by setting margins.
+    $('#navigation').animate({
+        left: "-1px"
+    }, 400, function () {
+        // Animation complete.
+    });
+});
+
+
+// Collapses our navigation.
+$("#click2").click(function () {
+    // Hides second button set so we have a new anchor to expand div.
+    $('.hide').hide();
+    $('.buttons').show();
+    $('#navigation').animate({
+        left: "-175px"
+    }, 400, function () {
+        // Animation complete.
+    });
+});
+
+});
+</script>
+</script>
+
+ <!--flexslider is here -->
+  <script defer src="js/jquery.flexslider.js"></script>
+  
+  <script type="text/javascript">
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 450,
+        itemMargin: 5,
+        minitems: 2,
+        maxitems: 4, 
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+
+  </script>
+
+
+        
+        </html>
