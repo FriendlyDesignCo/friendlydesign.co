@@ -63,7 +63,7 @@ header img {
     top: 40px;
     background-color: white;
     -webkit-box-shadow:0px 3px 1px 0px rgba(0, 0, 0, .25);
-    position: fixed;
+    position: absolute;
     z-index: 500;
 }
 /* Small hover navigation. */
@@ -238,7 +238,7 @@ ol.flex-control-nav {
 	float: left;
 }
 .last {
-	margin-bottom: 10%;
+	margin-bottom: 15%;
 }
 /* End project styles */
 
@@ -291,6 +291,7 @@ footer p.copyright {
 }
 .footcolumn1 img {
     width: 100%;
+    margin-top: 40%;
 }
 .footdoublecolumn {
     width: 80%;
