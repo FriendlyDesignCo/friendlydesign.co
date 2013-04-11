@@ -21,6 +21,14 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/flexslider.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <style> 
+.newspaper
+{
+columns:100px 3;
+-webkit-columns:100px 3; /* Safari and Chrome */
+-moz-columns:100px 3; /* Firefox */
+}
+</style>
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -95,7 +103,7 @@
 
                 </header>
                 <section class="slider">
-                    <div class="flexslider carousel">
+                    <div class="flexslider1 carousel">
                         <ul class="slides">
                             <li class="sliderfirst">
                                 <img src="img/slide.jpg" />
@@ -134,7 +142,7 @@
             </div>
 
             <section class="slider">
-                    <div class="flexslider carousel">
+                    <div class="flexslider2 carousel">
                         <ul class="slides">
                             <li class="sliderfirst">
                                 <img src="img/slide.jpg" />
@@ -173,7 +181,7 @@
             </div>
 
             <section class="slider">
-                    <div class="flexslider carousel">
+                    <div class="flexslider3 carousel">
                         <ul class="slides">
                             <li class="sliderfirst">
                                 <img src="img/slide.jpg" />
@@ -293,7 +301,30 @@
             // Begin flexslider code.
 
             $(window).load(function() {
-                $('.flexslider').flexslider({
+                $('.flexslider1').flexslider({
+                    animation: "slide",
+                    animationLoop: false,
+                    itemWidth: 580,
+                    itemMargin: 5,
+                    minitems: 3,
+                    maxitems: 4,
+                    start: function(slider) {
+                        $('body').removeClass('loading');
+                    }
+                });
+                // Need to call every flexslider individually.
+                $('.flexslider2').flexslider({
+                    animation: "slide",
+                    animationLoop: false,
+                    itemWidth: 580,
+                    itemMargin: 5,
+                    minitems: 3,
+                    maxitems: 4,
+                    start: function(slider) {
+                        $('body').removeClass('loading');
+                    }
+                });
+                $('.flexslider3').flexslider({
                     animation: "slide",
                     animationLoop: false,
                     itemWidth: 580,

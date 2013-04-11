@@ -215,13 +215,17 @@ ol.flex-control-nav {
     text-align: center;
     margin-top: 0;
 }
-.onethirdcolumn{
-	width: 80%;
+.onethirdcolumn {
 	margin: auto;
-	columns:100px 3;
-	-webkit-columns:100px 3; /* Safari and Chrome */
-	-moz-columns:100px 3; /* Firefox */
-	-moz-column-gap:4%;
+	width: 80%;
+}
+.onethirdcolumn p {
+    -moz-column-count:3;
+    /* Firefox */
+    -webkit-column-count:3;
+    /* Safari and Chrome */
+    column-count:3;
+    -moz-column-gap:4%;
     /* Firefox */
     -webkit-column-gap:4%;
     /* Safari and Chrome */
