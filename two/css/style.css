@@ -45,24 +45,19 @@ header img {
 	position: relative;
 }
 
-/* Begin navigation styles */
+/* Begin navigation styles. */
 
 /* Gives styling for navigation box. */
  #navigation {
     height: 100px;
     width: 200px;
     border: 1px solid green;
-    left: -175px;
-    margin-top: 30px;
-    background-color: white;
+    margin-left: -185px;
     -webkit-box-shadow:0px 3px 1px 0px rgba(0, 0, 0, .25);
-    z-index: 500;
-    position: absolute;
 }
 /* Small hover navigation. */
  #navigation:hover {
-    left: -173px;
-    position: absolute;
+    margin-left: -183px;
 }
 /* Gives buttons pointer hovers. */
  #click {
@@ -73,14 +68,16 @@ header img {
 }
 /* Places buttons within box properly. */
  ul.buttons {
-    padding-right: 10px;
+    margin:0;
+    padding:0;
     float: right;
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     -webkit-padding-start: 0px;
-    padding-top: 38px;
+    margin-top: 38px;
+    padding-right: 10px;
 }
 /* Styling buttons. */
  ul.buttons li {
@@ -91,12 +88,16 @@ header img {
 /* Places buttons within box properly for second set of buttons. */
  ul.hide {
     display: none;
-    padding-right: 10px;
+    margin: 0;
+    padding: 0;
     float: right;
     -webkit-margin-before: 0em;
-    padding-top: 38px;
-    margin-left: 0;
-    padding-left: 0;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    margin-top: 38px;
+    padding-right: 10px;
 }
 /* Styling second set of buttons. */
  ul.hide li {
@@ -107,11 +108,15 @@ header img {
 /* Styling for a hrefs you see in expanded navigation. */
  ul.nav {
     float: left;
-    margin-left: 15px;
-    padding-top: 20px;
+    /*margin-left: 0px;
+    padding-top: 0px;
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
-    -webkit-padding-start: 0px;
+    -webkit-padding-start: 0px;*/
+    padding: 0;
+    margin: 0;
+    margin-left: 15px;
+    margin-top: 23px;
 }
 /* Hides a hrefs in expanded navigation's bullets. */
  ul.nav li {
@@ -119,15 +124,8 @@ header img {
     text-align: left;
 }
 
-#navigation a {
-	font-family: "proxima-nova", "helvetica neue", helvetica, arial, sans-serif;
-    font-weight: 400;
-	font-size: 12pt;
-	color: #51B748;
-	text-decoration: none;
-}
 
-/* End navigation styles */
+/* End navigation styles. */
 
 h1.solve {
 	font-weight: 400;
