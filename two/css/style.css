@@ -6,6 +6,8 @@ html{
 body{
 	font-family: "ff-tisa-web-pro","Chaparal Pro", Garamond, Georgia, Serif;
 	z-index: 1;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 
@@ -19,7 +21,7 @@ body{
 
 p, li
 {
-  font-size: 18px;   
+  font-size: 1.125em;   
 }
 
 
@@ -173,7 +175,7 @@ footer a {
 	text-decoration: none;
 	font-family: "proxima-nova", "helvetica neue", helvetica, arial, sans-serif;
 	text-transform: uppercase;
-	font-size: 14pt;
+	font-size: 0.875em;
 }
 
 footer p.copyright {
