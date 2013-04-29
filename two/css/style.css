@@ -214,6 +214,7 @@ ol.flex-control-nav {
     font-weight: 700;
     text-align: center;
     margin-top: 0;
+    word-wrap: break-word;
 }
 .onethirdcolumn {
 	margin: auto;
@@ -358,9 +359,14 @@ footer p.copyright {
     header img {
         width: 65%;
     }
-    h1 {
-        width: 75%;
-        padding: 2%;
+    #main > h2 {
+        text-align: left;
+        margin-left: 8%;
+        margin-bottom: 1%;
+        margin-right: 5%;
+    }
+    .slider {
+        margin-bottom: 0;
     }
     .onethirdcolumn p {
         -moz-column-count:1;
@@ -374,12 +380,12 @@ footer p.copyright {
         /* Safari and Chrome */
         column-gap:20px;
     }
-}
     /* #Begin footer styles
 ================================================== */
     footer h1 {
         margin-left: 8%;
         margin-top: 1%;
+        margin-bottom: 25%;
     }
     .footcolumn1 {
         width: 100%;
@@ -387,6 +393,7 @@ footer p.copyright {
     .footcolumn1 img {
         width: 60%;
         margin-left: 17%;
+        margin-top: 1%;
     }
     .footdoublecolumn {
         width: 100%;
