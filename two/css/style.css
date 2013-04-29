@@ -358,6 +358,23 @@ footer p.copyright {
     header img {
         width: 65%;
     }
+    h1 {
+        width: 75%;
+        padding: 2%;
+    }
+    .onethirdcolumn p {
+        -moz-column-count:1;
+        /* Firefox */
+        -webkit-column-count:1;
+        /* Safari and Chrome */
+        column-count:1;
+        -moz-column-gap:4%;
+        /* Firefox */
+        -webkit-column-gap:4%;
+        /* Safari and Chrome */
+        column-gap:20px;
+    }
+}
     /* #Begin footer styles
 ================================================== */
     footer h1 {
