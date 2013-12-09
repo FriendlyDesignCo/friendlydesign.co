@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        
+        <!-- Custom Variables -->
+        <meta name="image:Logo" content=""/>
+        <meta name="text:Colophon" content="Ashley theme by Jxnblk"/>
+        <meta name="text:GoogleWebFont" content="Gentium Book Basic"/>
+        <meta name="text:GoogleWebFontURL" content="Gentium+Book+Basic"/>
+        <meta name="color:Background" content="#fff"/>
+        <meta name="color:Text" content="#444"/>
+        <meta name="color:Link" content="#099"/>
+        
+        <title>{Title}{block:PostSummary} &mdash;{PostSummary}{/block:PostSummary}</title>
+        {block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="apple-touch-icon" href="{PortraitURL-128}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    
+        {block:IfGoogleWebFont}
+        <!-- Google Web Fonts -->
+        <link href='http://fonts.googleapis.com/css?family={text:GoogleWebFontURL}' rel='stylesheet' type='text/css'>
+        {/block:IfGoogleWebFont}
+
+        <link href="http://friendly.jaredlaser.com/stylesheets/tumblr.css" rel="stylesheet" type="text/css">
+        <meta name=viewport content='width=device-width, initial-scale=1'>
+        
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <script type="text/javascript" src="//use.typekit.net/ail8lfw.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+        <style>
+body {
+  color: {color:Text};
+  background: {color:Background};
+}
+
+a {
+  color: {color:Link};
+}
+
+header a, a.post-title {
+  color: {color:Text};
+}
+
+a.post-title:hover {
+  color: {color:Link};
+}
+
+.notes .action a {
+  color: {color:Text};
+}
+            {CustomCSS}
+            
+        </style>
+</head>
+
+<body>
+
+    <nav id="main-navigation">
+        <a href="#" id="nav-toggle-switch" class="ir">Toggle Navigation</a>
+        <ul>
+            <li>
+                <a id="page-about" href="/about">We're Friendly</a>
+            </li>
+            <li>
+                <a class="dropdown-toggler" id="page-contact" href="/contact">Location and Contact</a>
+            </li>
+            <li>
+                <a href="/blog">Friendly Blog</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="main">
+        <div class="page-container">
+            <header id="global-header">
+                <div id="header-logo" class="clearfix">
+                    <img src="http://friendly.jaredlaser.com/images/friendly-logo.png">
+                </div>
+            </header>
+            <div class="page-coverup">
+                <div class="content wrap">
+                    <div class="page-headline subpage-headline" id="about-header">
+                        <h1><a href="/">{Title}</a></h1>
+                    </div>
+                    <section class="posts">
+                        {block:NoSearchResults}
+                            <h2>Sorry, nothing found for &ldquo;{SearchQuery}&rdquo;.</h2>
+                        {/block:NoSearchResults}
+
+                        {block:TagPage}
+                            <h2 class="h1">#{Tag}</h2>
+                        {/block:TagPage}
+
+                        {block:Posts}
+                            <article class="post {PostType}">
+                                {block:Text}
+                                    {block:Title}
+                                        <a href="{Permalink}" class="post-title"><h2>{Title}</h2></a>
+                                    {/block:Title}
+                                    
+                                    {Body}
+                                    
+                                    {block:More}<a href="{Permalink}" class="p">Read More &raquo;</a>{/block:More}
+                                    
+                                {/block:Text}
+
+                                {block:Photo}
+                                    {LinkOpenTag}
+                        <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">           
+                                    {LinkCloseTag}
+
+                                    {block:Caption}
+                                        {Caption}
+                                    {/block:Caption}
+                                {/block:Photo}
+
+                                {block:Photoset}
+                                    {Photoset-500}
+
+                                    {block:Caption}
+                                        {Caption}
+                                    {/block:Caption}
+                                {/block:Photoset}
+
+                                {block:Quote}
+                                    <blockquote>
+                                        <p class="h3">&ldquo;{Quote}&rdquo;</p>
+
+                                        {block:Source}
+                                            <p class="source">&ndash; {Source}</p>
+                                        {/block:Source}
+                                    </blockquote>
+                                {/block:Quote}
+
+                                {block:Link}
+                                    <h2><a href="{URL}"{Target}>{Name} &raquo;</a></h2>
+
+                                    {block:Description}
+                                        {Description}
+                                    {/block:Description}
+                                {/block:Link}
+
+                                {block:Chat}
+                                    {block:Title}
+                                        <h2>{Title}</h2>
+                                    {/block:Title}
+
+                                    <ul>
+                                        {block:Lines}
+                                            <li class="{Alt}">
+                                                {block:Label}
+                                                    <b>{Label}</b>
+                                                {/block:Label}
+
+                                                {Line}
+                                            </li>
+                                        {/block:Lines}
+                                    </ul>
+                                {/block:Chat}
+
+                                {block:Audio}
+                                    {block:AudioEmbed}
+                                        {AudioEmbed-640}
+                                    {/block:AudioEmbed}
+                                    {block:AudioPlayer}
+                                        {AudioPlayer}
+                                        {block:ExternalAudio}
+                                            <a href="{ExternalAudioURL}">Download</a>
+                                        {/block:ExternalAudio}
+                                    {/block:AudioPlayer}
+                                    
+                                    {block:Caption}
+                                        {Caption}
+                                    {/block:Caption}
+                                {/block:Audio}
+
+                                {block:Video}
+                                    {Video-700}
+
+                                    {block:Caption}
+                                        {Caption}
+                                    {/block:Caption}
+                                {/block:Video}
+
+                                {block:Answer}
+                                    <h2>{Asker} asked: <q>{Question}</q></h2>
+
+                                    {Answer}
+                                {/block:Answer}
+
+                                {block:Date}
+                                    <footer>
+                                        <ul class="small">
+                                            <li><a href="{Permalink}" title="{DayOfWeek}, {DayOfMonth} {Month} {Year}, {24Hour}:{Minutes}:{Seconds}">{TimeAgo}</a></li>
+                                                
+                                            {block:RebloggedFrom}<li class="source"> (reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>)</li>{/block:RebloggedFrom}
+                                            {block:ContentSource}
+                                                <li class="source">via <a href="{SourceURL}">{SourceTitle}</a></li>
+                                            {/block:ContentSource}
+                                            
+                                        </ul>
+                                        
+                                        {block:PermalinkPage}
+                            
+                            {block:HasTags}
+                                                    <ul class="tags">
+                                                        {block:Tags}
+                                                            <li>
+                                                                <a href="{TagURL}">#{Tag}</a>
+                                                            </li>
+                                                        {/block:Tags}
+                                                    </ul>
+                                            {/block:HasTags}
+                                                
+                                        {/block:PermalinkPage}
+                                        
+                                        
+                                    </footer>
+                                {/block:Date}
+                            </article> <!-- /post -->           
+
+                            
+                        {block:PostNotes}
+                          <aside class="notes">
+                              {block:NoteCount}<p>{NoteCountWithLabel}</p>{/block:NoteCount}
+                                {PostNotes-64}
+                          </aside>
+                        {/block:PostNotes}
+
+
+                        {/block:Posts}
+                        
+                        {block:Pagination}
+                            <div class="pagination p">
+                                <span class="previous">{block:PreviousPage}<a href="{PreviousPage}" class="previous">{/block:PreviousPage}&laquo; Previous{block:PreviousPage}</a>{/block:PreviousPage}</span>
+                                <span class="page-numbers">{CurrentPage}/{TotalPages}</span>
+                                <span class="next">{block:NextPage}<a href="{NextPage}">{/block:NextPage}Next &raquo;{block:NextPage}</a>{/block:NextPage}</span>
+                            </div>
+                        {/block:Pagination}
+                        
+                        
+                        
+                    </section> <!-- /posts -->
+                </div> <!-- /content -->
+            </div>
+        </div>
+    </div>
+    
+        
+    {block:HasPages}
+    <footer class="small wrap">
+        <ul class="pages">
+        {block:Pages}
+            <li><a href="{URL}">{Label}</a></li>
+        {/block:Pages}
+        </ul>
+    </footer>
+    {/block:HasPages}
+    
+    
+    <footer id="global-footer">
+            <hr>
+            <div class="clearfix page-row" id="colophon-container">
+                <div id="footer-logo">
+                    <img src="http://friendly.jaredlaser.com/images/venn-outline.svg">
+                </div>
+                <div id="colophon">
+                    <h1>Colophon</h1>
+                    <div class="colophon-content">
+                        <h2>Typography</h2>
+                        <p>We primarily typeset this page in Proxima Nova, designed by by Mark Simonson Studio in 2005 to build upon his 1994 release of Proxima Sans. We also utilize Vernon Adams’s <a href="#">Pacifico script</a>. All typographry are served care of Google Web Fonts.</p>
+                        
+                        <h2>Javascript</h2>
+                        <p>We deployed several scripts to help create your fabulous viewing experience. Nivo Slider for the main image slideshow area, which then feed into Fancybox (Part of FancyApps), which is also used for the thumbnails later on the page. The Javascript for the right-hand side of the page was provided by James Cole.</p>
+                        
+                        <h2>Technology</h2>
+                        <p>We built FriendlyDesign.co on a growing collection of MacBook Pros, using the Adobe Creative Suite v5.0, with the help of Firebug, Chrome, and various modern web utilties for CSS tweaking. This undertaken was largely fueled by MadCap Coffee provided through Canvas.Co/Work, at which we are among the founding members.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="footer-meta">
+                <div class="page-row clearfix">
+                    <nav>
+                        <ul>
+                            <li><a href="#">BLOG</a>
+
+                            </li>
+                            <li><a href="https://twitter.com/FriendlyDC">TWITTER</a>
+
+                            </li>
+                            <li><a href="#">ABOUT</a>
+
+                            </li>
+                            <li><a href="#">EMAIL</a>
+
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="ir mobile-only-logo"></div>
+                    <div id="footer-copyright">
+                        <p>&copy; 2013 Friendly Design CO</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="http://friendly.jaredlaser.com/js/main.js"></script>
+    </body>
+</html>
