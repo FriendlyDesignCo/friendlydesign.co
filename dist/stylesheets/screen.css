@@ -701,6 +701,13 @@ p, li {
   font-size: 1.125em;
 }
 
+@media only screen and (max-width: 767px) {
+  p{
+	  font-size: .875em;
+  }
+}
+
+
 /* line 116, ../sass/_main.scss */
 .portfolio-piece {
   overflow: hidden;
