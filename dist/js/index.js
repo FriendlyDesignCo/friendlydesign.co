@@ -7,10 +7,10 @@ friendly.navExpandedClass = 'is-expanded';
 $(document).ready(function() {
 
   // toggle nav and get height of main container
-  $( '#nav-toggle-switch' ).on('click', function(e) {
-    e.preventDefault();
-    $(this).parent().toggleClass( friendly.navExpandedClass );
-  });
+  // $( '#nav-toggle-switch' ).on('click', function(e) {
+  //   e.preventDefault();
+  //   $(this).parent().toggleClass( friendly.navExpandedClass );
+  // });
 
   $( '.content-slider' ).on('click', function(e) {
     e.preventDefault();
@@ -27,7 +27,7 @@ $(document).ready(function() {
     $('#main').toggleClass('is-modal-active');
   });
 
-  $( '#page-about, #page-contact' ).on('click', function() {
+  $( '#page-contact' ).on('click', function() {
     $( '#main-navigation' ).removeClass( friendly.navExpandedClass );
   });
 
@@ -44,15 +44,15 @@ $(document).ready(function() {
   });
 
   // slide the homepage down to reveal the about page underneath
-  $( '#page-about' ).on('click', function(e) {
-    e.preventDefault();
-    pageToggle();
-  });
+  // $( '#page-about' ).on('click', function(e) {
+  //   e.preventDefault();
+  //   pageToggle();
+  // });
 
-  $( '#about-closer' ).on('click', function(){
-    pageToggle();
-    scrollToTop();
-  });
+  // $( '#about-closer' ).on('click', function(){
+  //   pageToggle();
+  //   scrollToTop();
+  // });
 
   var scrollToTop = function() {
     jQuery('body' ).animate({
@@ -93,7 +93,7 @@ function setHeights() {
 }
 
 $(window).load(function() {
-  setHeights();
+  // setHeights();
 });
 
 $(window).one('scroll', function() {

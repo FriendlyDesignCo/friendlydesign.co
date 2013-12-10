@@ -24,7 +24,7 @@
 
 
 </head>
-    <body class="is-loading">
+    <body class="">
         <section id="contact-pulldown">
             <h1>Contact AND/OR STALK US… Please?</h1>
             <div class="clearfix">
@@ -63,69 +63,31 @@
             </a>
         </section>
         <nav id="main-navigation" class="is-expanded">
-            <a href="#" id="nav-toggle-switch" class="ir">Toggle Navigation</a>
-            <ul>
-                <li>
-                    <a id="page-about" href="/about">We're Friendly</a>
-                </li>
-                <li>
-                    <a class="dropdown-toggler" id="page-contact" href="/contact">Location and Contact</a>
-                <li>
-                    <a href="/blog">Friendly Blog</a>
-                </li>
-            </ul>
+            <div>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="active">
+                        <a id="page-about" href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggler" id="page-contact" href="/contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="/blog">Blog</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <div id="main">
             <div class="page-container">
                 <header id="global-header">
                     <div id="header-logo" class="clearfix">
-                        <img src="images/friendly-logo.png">
+                        <img src="images/friendly-logo-2x.png">
                     </div>
                 </header>
-                <div class="page page--homepage page-coverup" id="page-portfolio">
-                    <div class="page-row page-headline" id="home-mission">
-                        <!-- <h1 class="headline">We solve creative problems with awesome solutions.</h1> -->
-                        <h1 class="headline">Lorem ipsum dolor sit amet, consectetur.</h1>
-                        <h2 class="headline-helper">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-                    </div>
-                    <div class="portfolio-piece">
-                        <div class="portfolio-slider" data-position="1">
-                            <ul class="portfolio-slider--slides">
-                                <li>
-                                    <img src="images/demo/1.jpg">
-                                <li>
-                                    <img src="images/demo/2.jpg">
-                                <li>
-                                    <img src="images/demo/3.jpg">
-                                <li>
-                                    <img src="images/demo/4.jpg">
-                            </ul>
-                        </div>
-                        <div class="home-columns page-row">
-                            <h2>Lorem ipsum dolor.</h2>
-                            <p>Maybe if we felt any human loss as keenly as we feel one of those close to us, human history would be far less bloody. Some days you get the bear, and some days the bear gets you. Maybe if we felt any human loss as keenly as we feel one of those close to us. Maybe if we felt any human loss as keenly as we feel one of those close to us, human history would be far less bloody. Some days you get the bear, and some days the bear gets you. We could alter the photons with phase discriminators. <a href="#" class="read-more">VISIT THE SITE<span class="icon-arrowRight"></span></a></p>
-                        </div>
-                    </div>
-                    <div class="portfolio-piece">
-                        <div class="portfolio-slider" data-position="1">
-                            <ul class="portfolio-slider--slides">
-                                <li>
-                                    <img src="images/demo/1.jpg">
-                                <li>
-                                    <img src="images/demo/2.jpg">
-                                <li>
-                                    <img src="images/demo/3.jpg">
-                                <li>
-                                    <img src="images/demo/4.jpg">
-                            </ul>
-                        </div>
-                        <div class="home-columns page-row">
-                            <h2>Lorem ipsum dolor.</h2>
-                            <p>Maybe if we felt any human loss as keenly as we feel one of those close to us, human history would be far less bloody. Some days you get the bear, and some days the bear gets you. Maybe if we felt any human loss as keenly as we feel one of those close to us. Maybe if we felt any human loss as keenly as we feel one of those close to us, human history would be far less bloody. Some days you get the bear, and some days the bear gets you. We could alter the photons with phase discriminators. <a href="#" class="read-more">VISIT THE SITE<span class="icon-arrowRight"></span></a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="page page-about page--subpage">
+                <div class="page page-about page--subpage page-coverup">
                     <div class="page-row page-headline subpage-headline" id="about-header">
                         <h1>Lorem Ipsum. <br>(Lorem ipsum dolor sit.)</h1>
                     </div>
@@ -172,7 +134,7 @@
             </div>
         </div>
         <footer id="global-footer">
-            <hr>
+            <div class="hr-wrap"><hr></div>
             <div class="clearfix page-row" id="colophon-container">
                 <div id="footer-logo">
                     <img src="images/venn-outline.svg">
@@ -180,14 +142,17 @@
                 <div id="colophon">
                     <h1>Colophon</h1>
                     <div class="colophon-content">
-                        <h2>Typography</h2>
-                        <p>We primarily typeset this page in Proxima Nova, designed by by Mark Simonson Studio in 2005 to build upon his 1994 release of Proxima Sans. We also utilize Vernon Adams’s <a href="#">Pacifico script</a>. All typographry are served care of Google Web Fonts.</p>
+                        <div class="col-col-left">
+                            <h2>Typography</h2>
+                            <p>We primarily typeset this page in Proxima Nova, designed by by Mark Simonson Studio in 2005 to build upon his 1994 release of Proxima Sans. We also utilize Vernon Adams’s <a href="#">Pacifico script</a>. All typographry are served care of Google Web Fonts.</p>
 
-                        <h2>Javascript</h2>
-                        <p>We deployed several scripts to help create your fabulous viewing experience. Nivo Slider for the main image slideshow area, which then feed into Fancybox (Part of FancyApps), which is also used for the thumbnails later on the page. The Javascript for the right-hand side of the page was provided by James Cole.</p>
-                        
-                        <h2>Technology</h2>
-                        <p>We built FriendlyDesign.co on a growing collection of MacBook Pros, using the Adobe Creative Suite v5.0, with the help of Firebug, Chrome, and various modern web utilties for CSS tweaking. This undertaken was largely fueled by MadCap Coffee provided through Canvas.Co/Work, at which we are among the founding members.</p>
+                            <h2>Javascript</h2>
+                            <p>We deployed several scripts to help create your fabulous viewing experience. Nivo Slider for the main image slideshow area, which then feed into Fancybox (Part of FancyApps), which is also used for the thumbnails later on the page. The Javascript for the right-hand side of the page was provided by James Cole.</p>
+                        </div>
+                        <div class="col-col-right">
+                            <h2>Technology</h2>
+                            <p>We built FriendlyDesign.co on a growing collection of MacBook Pros, using the Adobe Creative Suite v5.0, with the help of Firebug, Chrome, and various modern web utilties for CSS tweaking. This undertaken was largely fueled by MadCap Coffee provided through Canvas.Co/Work, at which we are among the founding members.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -208,10 +173,7 @@
             </div>
         </footer>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
-        <!-- build:js js/main.js -->
         <script src="js/carousel.js"></script>
         <script src="js/index.js"></script>
-        <!-- endbuild -->
-<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     </body>
 </html>

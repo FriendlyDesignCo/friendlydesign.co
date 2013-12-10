@@ -1,0 +1,53 @@
+#main-navigation {
+    @include box-sizing(border-box);
+    padding: 19px 15px;
+    height: 114px;
+    width: 236px;
+    background: #fff;
+    border: 1px solid $linkColor;
+    position: fixed;
+    top: 40px;
+    left: $navFullLeft;
+    z-index: 12;
+    @include box-shadow(0px 3px 1px 0px rgba(0, 0, 0, .25));
+    @include single-transition( left, 0.8s );
+    @include respond-to(tablet) {
+        position: absolute;
+    }
+    @include respond-to(mobile) {
+        position: absolute;
+    }
+    &.is-expanded {
+        left: 0;
+        &:hover {
+            left: 0;
+        }
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            padding: 0;
+            list-style-type: none;
+            line-height: 26px;
+        }
+    }
+    &:hover {
+        left: $navFullLeft + 5;
+    }
+    a {
+        @include link-style($linkColor);
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+        &#nav-toggle-switch {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 25px;
+            height: 102px;
+            background: inline-image('icon-nav-grab.png') no-repeat center center;
+        }
+    }
+}

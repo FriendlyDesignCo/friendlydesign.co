@@ -1,0 +1,12 @@
+{
+  "name": "friendlydesign.co",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "imagesloaded": "~2.1.2"
+  }
+}

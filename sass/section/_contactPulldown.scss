@@ -1,0 +1,175 @@
+$pulldown-width: 1000px;
+
+#contact-pulldown {
+    background: white;
+    border: 1px solid $brightBlue;
+    border-top: none;
+    width: $pulldown-width;
+    padding: 50px 124px;
+    margin-left: -$pulldown-width / 2;
+    position: absolute;
+    top: -120%;
+    left: 50%;
+    z-index: 15;
+    opacity: 0;
+    @include font-sans;
+    @include box-sizing(border-box);
+    @include single-transition( all, 0.8s );
+    @include box-shadow(0px 3px 1px 0px rgba(0, 0, 0, .25));
+    @include respond-to(tabletLandscape) {
+        width: 800px;
+        left: 50%;
+        margin-left: -400px;
+    }
+    @include respond-to(tabletPortrait) {
+        width: 100%;
+        background: pink;
+        padding: 50px 15px;
+        margin-left: 0;
+        border-right: none;
+        border-left: none;
+        left: 0;
+        top: -190%;
+    }
+    @include respond-to(mobile) {
+        width: 100%;
+        padding: 50px 15px;
+        margin-left: 0;
+        border-right: none;
+        border-left: none;
+        left: 0;
+        top: -190%;
+    }
+    &.is-active {
+        opacity: 1;
+        top: 0;
+    }
+    h1 {
+        font-weight: 700;
+        font-size: em(40);
+        text-transform: uppercase;
+        color: $brightBlue;
+        margin-top: 0;
+        @include respond-to(tablet) {
+            font-size: em(30);
+        }
+        @include respond-to(mobile) {
+            font-size: em(36);
+        }
+    }
+    #contact-info {
+        float: left;
+        width: 400px;
+        color: $contactText;
+        font-size: em(20);
+        @include respond-to(tablet) {
+            width: 40%;
+            font-size: em(16);
+        }
+        address {
+            font-style: normal;
+            margin: 0 0 1em;
+        }
+        a {
+            @include link-style( $brightBlue, $darkGreen );
+        }
+        td:first-child {
+            padding: 0 10px 0 0;
+        }
+    }
+    form {
+        float: right;
+        width: 350px;
+        font-size: em(20);
+        @include respond-to(tablet) {
+            font-size: em(16);
+            width: 45%;
+        }
+        @include respond-to(mobile) {
+            margin-bottom: 1em;
+            float: none;
+        }
+        legend, input, textarea {
+            // resets user agent stylesheets
+            margin: 0 0 0.5em;
+            padding: 0;
+            color: $contactText
+        }
+        fieldset {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        input, textarea {
+            display: block;
+            width: 100%;
+            border: 1px solid $brightBlue;
+            margin: 0 0 0.5em;
+            padding: 0.25em 0.5em;
+            outline: none;
+            resize: none;
+            border-radius: none;
+            @include box-shadow(0 0 1px $contactText inset);
+            @include box-sizing(border-box);
+        }
+        .contact-form-submit {
+            background: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            width: 25%;
+            color: $brightBlue;
+            float: right;
+            position: relative;
+            right: 5px;
+            top: 0;
+            @include box-shadow(5px 5px);
+            @include single-transition( all, 0.3s );
+            @include respond-to(mobile) {
+                float: none;
+            }
+            &:hover {
+                @include box-shadow(none);
+                right: 0;
+                top: 5px;
+            }
+            &:active {
+                @include box-shadow(0 0 2px $contactText inset);
+            }
+        }
+    }
+}
+
+.content-slider {
+    $closerSize: 60px;
+    text-decoration: none;
+    background: white;
+    color: $brightBlue;
+    border: 1px solid;
+    padding: 25px 20px;
+    width:  $closerSize;
+    height: $closerSize;
+    display: inline-block;
+    position: absolute;
+    bottom: -$closerSize / 2;
+    left: 50%;
+    margin-left: -$closerSize / 2;
+    @include box-sizing(border-box);
+    @include border-radius(100%);
+    @include single-transition( all, 0.8s );
+    &.content-slider--bottom {
+        bottom: -$closerSize / 2;
+    }
+    &.content-slider--top {
+        top: -$closerSize / 2;
+    }
+    span {
+        border-top: 1px solid;
+        border-right: 1px solid;
+        width: 15px;
+        height: 15px;
+        @include transform(rotate(-45deg));
+    }
+    &:hover {
+        @include box-shadow(0 0 2px $contactText inset);
+    }
+}

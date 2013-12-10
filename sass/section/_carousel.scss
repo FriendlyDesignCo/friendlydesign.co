@@ -1,0 +1,71 @@
+.portfolio-slider {
+    position: relative;
+    .portfolio-slider--slides {
+        padding: 0;
+        margin: 0;
+        position: relative;
+        left: 25%;
+        @include single-transition( left, 0.3s );
+        @include respond-to(mobile) {
+            left: 10%;
+        }
+    }
+    li {
+        list-style-type: none;
+        display: inline-block;
+        width: 500px;
+        padding-right: 50px;
+        @include respond-to(tablet) {
+            width: 350px;
+        }
+        @include respond-to(mobile) {
+            width: 225px;
+        }
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.carousel-pager {
+    @extend .content-slider;
+    position: absolute;
+    top: 50%;
+    text-decoration: none;
+    color: $linkColor;
+    font-size: em(30);
+    opacity: 0.4;
+    left: auto;
+    right: auto;
+    background-size: 100%;
+    @include single-transition( opacity, 0.5s );
+    @include respond-to(tablet) {
+        opacity: 1;
+    }
+    @include respond-to(mobile) {
+        width: 18px;
+        height: 35px;
+    }
+    &:hover {
+        opacity: 1;
+    }
+    &.carousel-pager--prev {
+        left: 3%;
+        padding: 22px 24px;
+        span {
+            @include transform(rotate(-135deg));
+        }
+    }
+    &.carousel-pager--next {
+        right: 2%;
+        padding: 22px 17px;
+        span {
+            @include transform(rotate(45deg));
+        }
+    }
+    &.is-end-of-slider {
+        display: none;
+        opacity: 0;
+    }
+}

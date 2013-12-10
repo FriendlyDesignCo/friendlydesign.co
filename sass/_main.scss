@@ -1,0 +1,180 @@
+body {
+    @include font-serif;
+    z-index: 1;
+}
+
+#main {
+    padding: 20px;
+    overflow: hidden;
+    @include transition-property(background);
+    @include transition-property(opacity);
+    @include transition-duration(0.3s);
+    &.is-modal-active {
+        opacity: 0.6;
+    }
+    .page-container {
+        position: relative;
+    }
+    .page--homepage {
+        padding: 2em 0 4em;
+    }
+    .page-about {
+        background: #f5f5f5;
+        border-bottom: 2px solid $mediumGrey;
+        position: absolute;
+        top: 0;
+        left: 00;
+        @include box-sizing(border-box);
+        @include box-shadow(0 0 2px $darkGrey);
+        // z-index: 20; // toggle this to do work on about page
+        .is-loading & {
+            display: none;
+        }
+    }
+    .page-coverup {
+        z-index: 5;
+        background: #fff;
+        outline: 1px solid $brightGreen;
+        @include transition-property(top);
+        #about-closer {
+            opacity: 0;
+            @include transition-property(opacity);
+        }
+        &.is-hidden {
+            #about-closer {
+                opacity: 1;
+            }
+        }
+    }
+    .page-coverup, #about-closer {
+        @include transition-duration(1.25s);
+    }
+}
+
+.page {
+    position: relative;
+}
+
+.page-row {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#home-mission {
+    margin: 9em auto 10% auto;
+    @include respond-to(tablet) {
+        margin-bottom: 8%;
+    }
+    @include respond-to(tabletPortrait) {
+        width: 80%;
+        margin-top: 7em;
+    }
+    @include respond-to(mobile) {
+        width: 80%;
+        margin-top: 7em;
+    }
+}
+
+h1 {
+    &.headline {
+        -webkit-font-smoothing: antialiased;
+        font-weight: 400;
+        font-size: em(64);
+        line-height: 1.25em;
+        color: $headerColor;
+        margin: 0 0 0.5em;
+        @include respond-to(tablet) {
+            font-size: em(50);
+        }
+        @include respond-to(mobile) {
+            font-size: em(26);
+        }
+    }
+}
+
+h2 {
+    &.headline-helper {
+        -webkit-font-smoothing: antialiased;
+        font-weight: 400;
+        font-size: em(48);
+        line-height: 1.25em;
+        color: #b3b3b3;
+        margin-top: 0;
+        @include respond-to(tablet) {
+            font-size: em(37.5);
+        }
+        @include respond-to(mobile) {
+            font-size: em(19.5);
+        }
+    }
+}
+
+p, li {
+    font-size: em(18);
+}
+
+.portfolio-piece {
+    overflow: hidden;
+    margin: 0 0 4em;
+    .home-columns {
+        width: 66%;
+        margin-left: 25%;
+        @include respond-to(mobile) {
+            width: 80%;
+            margin-left: auto;
+        }
+        h2 {
+            color: #51B748;
+            text-transform: uppercase;
+            margin-bottom: 0.5em;
+            word-wrap: break-word;
+            font-size: em(40);
+            font-weight: 700;
+            @include font-sans(700);
+            @include respond-to(mobile) {
+                margin: em(8) auto;
+                font-size: em(30);
+            }
+        }
+        p {
+            @include column-count(2);
+            @include column-gap($columnGap);
+            margin: 0;
+            padding: 0;
+            @include respond-to(tablet) {
+                @include column-count(2);
+            }
+            @include respond-to(mobile) {
+                @include column-count(1);
+            }
+            .read-more {
+                text-decoration: none;
+                position: relative;
+                display: inline-block;
+                @include font-sans;
+                @include link-style($linkColor);
+                span {
+                    position: absolute;
+                    font-size: 10px;
+                    right: -20px;
+                    top: 25%;
+                    @include respond-to(mobile) {
+                        left: 125px;
+                        top: 5px;
+                    }
+                }
+                @include respond-to(mobile) {
+                    display: block;
+                    margin: em(16) 0;
+                }
+            }
+        }
+    }
+}
+
+
+.slider {
+    @include respond-to(mobile) {
+        margin-bottom: 0;
+    }
+}

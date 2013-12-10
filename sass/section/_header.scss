@@ -1,0 +1,43 @@
+@import "libs/_animation";
+@include keyframes(logo-appear) {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#global-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    #header-logo {
+        text-align: right;
+        @include animation-name(logo-appear);
+        @include animation-duration(3s);
+        @include animation-iteration-count(1);
+        @include respond-to(mobile) {
+            text-align: center;
+        }
+        img {
+            width: 15%;
+            margin: -10px 3% 0 0;
+            @include respond-to(tablet) {
+                width: 25%;
+            }
+            @include respond-to(tabletLandscape) {
+                width: 20%;
+            }
+            @include respond-to(mobile) {
+                width: 50%;
+                margin-right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.base h1 {
+    @include headerStyle;
+}
+
+.base h2 {
+    @include font-sans(700);
+    color: $baseText;
+}
+.base h3 {
+    color: $baseText;
+}
+.base h4 {
+    color: $baseText;
+}
+.base h5 {
+    color: $baseText;
+}
+.base h6 {
+    color: $baseText;
+}
+.base p {
+    color: $baseText;
+}
+.base a {
+    color: $linkColor;
+}
+
+.base ul, .base ol {
+  margin-left: 1.8em;
+  color: $baseText;
+  @include respond-to(mobile) {
+    margin-left: 0;
+  }
+}
+
+.base ul li {
+  list-style-type: disc;
+}
+
+.base ol li {
+  list-style-type: decimal;
+}
+
+.base li ul, .base li ol {
+    font-size: em(12);
+}
+
+.base blockquote {
+    border-left: 4px solid $brightGreen;
+    color: #444;
+    padding: 1em 2em;
+    background: #eee;
+    @include respond-to(mobile) {
+        margin: 0;
+    }
+}
+
+.base {
+    a:hover, a:active {
+        outline: none;
+    }
+
+    a, a:active, a:visited {
+        @include link-style($linkColor);
+    }
+
+    a:hover, a:focus { 
+        @include link-style(#036);
+    }
+
+    a:link { 
+        -webkit-tap-highlight-color: #FF5E99;
+    }
+}

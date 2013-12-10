@@ -1,0 +1,20 @@
+// site
+$navFullLeft:      -195px;
+$transitionLength: 0.3s;
+
+// type
+$defaultFontSize:  16;       // specify px value
+$columnGap:        21px;     // keep column gaps consistent
+
+// colors
+$brightGreen: #51b748;
+$darkGreen:   rgba(0, 115, 59, 1);
+$brightBlue:  rgba(11, 169, 209, 1);
+$mediumGrey:  rgba(128, 128, 128, 1);
+$darkGrey:    rgba(102, 102, 102, 1);
+
+$linkColor:   $brightGreen;
+$headerColor: $brightGreen;
+$contactText: $mediumGrey;
+$baseText:    $darkGrey;
+$profileText: $darkGrey;

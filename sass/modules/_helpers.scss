@@ -1,0 +1,15 @@
+@function em($pxSize) {
+    @return $pxSize / $defaultFontSize * 1em;
+}
+
+@mixin link-style( $color, $hoverColor:'' ) {
+    color: $color;
+    @include single-transition( color, 0.3s, ease-out );
+    &:hover {
+        @if $hoverColor == '' {
+        color: darken($color, 10%);
+        } @else {
+            color: $hoverColor;
+        }
+    }
+}

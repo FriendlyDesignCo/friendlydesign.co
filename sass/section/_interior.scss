@@ -1,0 +1,76 @@
+.subpage-headline {
+    margin-bottom: 2em;
+    h1 {
+        @include headerStyle;
+    }
+}
+
+.team-description {
+    width: 800px;
+    margin-bottom: 4em;
+    @include respond-to(tablet) {
+        width: 600px;
+    }
+    @include respond-to(mobile) {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    img {
+        float: left;
+        width: 275px;
+        margin: 0 1em 0 0;
+        @include border-radius(100%);
+        @include respond-to(tablet) {
+            width: 200px;
+        }
+        @include respond-to(mobile) {
+            float: none;
+            width: 200px;
+        }
+    }
+    .team-description--profile {
+        float: left;
+        width: 509px;
+        color: $profileText;
+        @include respond-to(tablet) {
+            width: 380px;
+        }
+        @include respond-to(mobile) {
+            float: none;
+            width: 80%;
+            margin: 0 auto;
+        }
+        p {
+            margin-top: 0;
+            font-size: em(20);
+            @include respond-to(mobile) {
+                font-size: em(16);
+            }
+            b {
+                @include font-sans;
+                color: $brightGreen;
+            }
+        }
+    }
+    .team-description--social {
+        a {
+            margin: 0 3px 0 0;
+            font-size: em(38);
+            text-decoration: none;
+            line-height: 1em;
+            @include link-style( $brightGreen, $darkGreen );
+        }
+    }
+}
+
+.page--subpage {
+    width: 100%;
+    padding: 4em 0 2em;
+    @include respond-to(tablet) {
+        padding: 6em 0 2em;        
+    }
+    @include respond-to(mobile) {
+        padding: 9em 0 2em;
+    }
+}
