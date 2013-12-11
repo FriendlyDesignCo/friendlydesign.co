@@ -1144,7 +1144,7 @@ p, li {
   padding: 0.25em 0.5em;
   outline: none;
   resize: none;
-  border-radius: none;
+  border-radius: 0px;
   -webkit-box-shadow: 0 0 1px gray inset;
   -moz-box-shadow: 0 0 1px gray inset;
   box-shadow: 0 0 1px gray inset;
@@ -1157,7 +1157,7 @@ p, li {
   background: white;
   font-weight: 700;
   text-transform: uppercase;
-  width: 25%;
+  width: 28%;
   color: #0ba9d1;
   float: right;
   position: relative;
@@ -1198,7 +1198,6 @@ p, li {
 /*  background: white;
   color: #0ba9d1;
   border: 1px solid;*/
-  padding: 25px 20px;
   width: 60px;
   height: 60px;
   display: inline-block;
@@ -1206,28 +1205,32 @@ p, li {
   bottom: -30px;
   left: 50%;
   margin-left: -30px;
+  background-color: #fff;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-/*  -webkit-border-radius: 100%;
+  -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
-  border-radius: 100%;*/
+  border-radius: 100%;
   -webkit-transition: all 0.8s;
   -moz-transition: all 0.8s;
   -o-transition: all 0.8s;
   transition: all 0.8s;
 }
 .content-slider {
-  background: url(../images/arrow-up.png) 0 0 no-repeat;
+  background: #fff url(../images/arrow-up.png) 0 0 no-repeat;
+  border:1px solid #0ba9d1;
 }
 .carousel-pager--next {
-  background: url(../images/arrow-next.png) 0 0 no-repeat;
+  border:1px solid #51b748;
+  background: #fff url(../images/arrow-next.png) 0 0 no-repeat;
   top:43%;
 }
 .carousel-pager--prev {
-  background: url(../images/arrow-prev.png) 0 0 no-repeat;
+  border:1px solid #51b748;
+  background: #fff url(../images/arrow-prev.png) 0 0 no-repeat;
   top:43%;
 }
 
@@ -1364,7 +1367,7 @@ p, li {
 @media only screen and (max-width: 767px) {
   /* line 31, ../sass/section/_carousel.scss */
   .carousel-pager {
-    width: 18px;
+    width: 35px;
     height: 35px;
     top: 38%;
   }
@@ -1376,7 +1379,6 @@ p, li {
 /* line 53, ../sass/section/_carousel.scss */
 .carousel-pager.carousel-pager--prev {
   left: 5%;
-  padding: 22px 24px;
 }
 /* line 56, ../sass/section/_carousel.scss */
 .carousel-pager.carousel-pager--prev span {
@@ -1389,7 +1391,6 @@ p, li {
 /* line 60, ../sass/section/_carousel.scss */
 .carousel-pager.carousel-pager--next {
   right: 2%;
-  padding: 22px 17px;
 }
 /* line 63, ../sass/section/_carousel.scss */
 .carousel-pager.carousel-pager--next span {
