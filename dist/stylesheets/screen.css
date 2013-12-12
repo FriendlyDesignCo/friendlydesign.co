@@ -1378,7 +1378,7 @@ p, li {
 }
 /* line 53, ../sass/section/_carousel.scss */
 .carousel-pager.carousel-pager--prev {
-  left: 5%;
+  left: 48px;
 }
 /* line 56, ../sass/section/_carousel.scss */
 .carousel-pager.carousel-pager--prev span {
@@ -1390,7 +1390,7 @@ p, li {
 }
 /* line 60, ../sass/section/_carousel.scss */
 .carousel-pager.carousel-pager--next {
-  right: 2%;
+  right: 20px;
 }
 /* line 63, ../sass/section/_carousel.scss */
 .carousel-pager.carousel-pager--next span {
@@ -1674,7 +1674,7 @@ p, li {
 }
 .col-col-right {
   float:left;
-  width:48%;
+  width:47%;
 }
 
 @media only screen and (max-width: 767px) {

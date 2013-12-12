@@ -3,6 +3,8 @@ friendly.aboutHeight;
 friendly.mainHeight;
 friendly.pageHeight;
 friendly.navExpandedClass = 'is-expanded';
+friendly.contactActive = false;
+friendlyMain = $( '#main' );
 
 $(document).ready(function() {
 
@@ -15,28 +17,40 @@ $(document).ready(function() {
   $( '.content-slider' ).on('click', function(e) {
     e.preventDefault();
     $(this).parent().toggleClass('is-active' );
-    if( $('#main').hasClass('is-modal-active') ) {
-      $('#main').removeClass('is-modal-active');
+    if( friendlyMain.hasClass('is-modal-active') ) {
+      friendlyMain.removeClass('is-modal-active');
     }
   });
+
+
 
   $( '#page-contact' ).on('click', function(e) {
     e.preventDefault();
     scrollToTop();
-    $( '#contact-pulldown' ).toggleClass('is-active' );
-    $('#main').toggleClass('is-modal-active');
+    if (friendly.contactActive == true){
+      $( '#contact-pulldown' ).removeClass('is-active');
+      friendlyMain.removeClass('is-modal-active');
+      friendlyMain.attr('onclick','').unbind('click');
+    } else {
+      $( '#contact-pulldown' ).addClass('is-active');
+      friendlyMain.addClass('is-modal-active');
+      addMainEvent();
+    };
+
+    // $( '#contact-pulldown' ).toggleClass('is-active' );
+    // $('#main').toggleClass('is-modal-active');
   });
 
-  $( '#page-contact' ).on('click', function() {
-    $( '#main-navigation' ).removeClass( friendly.navExpandedClass );
-  });
+  // $( '#page-contact' ).on('click', function() {
+  //   $( '#main-navigation' ).removeClass( friendly.navExpandedClass );
+  // });
 
   // use the esc key to close the contact pulldown or the nav
   $(this).on('keyup', function(e){
     if ( e.keyCode == 27 ) {
       if ( $( '#contact-pulldown' ).hasClass('is-active' ) ) {
         $( '#contact-pulldown' ).removeClass('is-active' );
-        $( '#main' ).removeClass('is-modal-active');
+        friendlyMain.removeClass('is-modal-active');
       } else if ( $( '#main-navigation' ).hasClass( friendly.navExpandedClass ) ) {
         $( '#main-navigation' ).removeClass( friendly.navExpandedClass );
       }
@@ -60,15 +74,25 @@ $(document).ready(function() {
     }, 500);
   };
 
+
+  function addMainEvent(){
+    friendlyMain.on('click', function(e) {
+     e.preventDefault();
+     $( '#contact-pulldown' ).removeClass('is-active' );
+     friendlyMain.removeClass('is-modal-active');
+    });
+  };
+
+
   function pageToggle() {
     var $page = $( '.page-coverup' );
 
     if ( $page.hasClass('is-hidden' ) ) {
-      $( '#main' ).height( friendly.mainHeight );
+      friendlyMain.height( friendly.mainHeight );
       $( '.page-container' ).height( friendly.pageHeight );
       $page.removeClass('is-hidden' ).css('top', 0);
     } else {
-      $( '#main' ).height( friendly.mainHeight + friendly.aboutHeight );
+      friendlyMain.height( friendly.mainHeight + friendly.aboutHeight );
       $( '.page-container' ).height( friendly.pageHeight + friendly.aboutHeight );
       $page.addClass( 'is-hidden' ).css( 'top', friendly.aboutHeight );
     }
@@ -84,12 +108,11 @@ $(document).ready(function() {
 });
 
 function setHeights() {
-  var $main = $( '#main' )
   $('body').removeClass('is-loading');
   friendly.aboutHeight = $('.page-about').outerHeight();
-  friendly.mainHeight = $( '#main' ).height();
+  friendly.mainHeight = friendlyMain.height();
   friendly.pageHeight = $( '.page-container' ).height();
-  $main.height(friendly.mainHeight);
+  friendlyMain.height(friendly.mainHeight);
 }
 
 $(window).load(function() {
